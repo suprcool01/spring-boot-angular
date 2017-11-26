@@ -1,6 +1,6 @@
 package com.javacodegeeks.dto;
 
-public class Product {
+public class Bug {
 
 	private int id;
 	private String name;
@@ -17,17 +17,17 @@ public class Product {
 	private String assignedTo;
 	private String fixDescription;
 
-	public Product() {
+	public Bug() {
 	}
 
-	public Product(int id, String name, double price) {
+	public Bug(int id, String name, double price) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 	}
 	
 
-	public Product(int id, String location, String status, String type, String severity,
+	public Bug(int id, String location, String status, String type, String severity,
 			String bugDescription, String foundBy, String againstVersion, String dateFound, String assignedTo,
 			String fixDescription) {
 		super();
@@ -84,7 +84,7 @@ public class Product {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
+		Bug other = (Bug) obj;
 		if (id != other.id)
 			return false;
 		return true;

@@ -9,8 +9,10 @@ app.controller('rolesController', function($scope) {
 
 
 app.controller('projectController', function($scope){
+	
   $scope.message = "Project List";
   $scope.selected= {};
+  
   $scope.projects = [
 		   { 	'id':1,
 				'name':'Invoice Management',
@@ -22,7 +24,7 @@ app.controller('projectController', function($scope){
 			}
   ];
   
-  $scope.addRow = function(){	
+  $scope.addRow = function(){
 	$scope.projects.push({ 'id':$scope.id,'name':$scope.name, 'desc':$scope.desc });
 	$scope.name='';
 	$scope.desc='';

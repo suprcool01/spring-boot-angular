@@ -1,42 +1,42 @@
 'use strict';
  
-angular.module('app').factory('ProductService', ['$http', '$q', function($http, $q){
+angular.module('app').factory('ProjectService', ['$http', '$q', function($http, $q){
  
     var REST_SERVICE_URI = 'http://localhost:8080/';
  
     var factory = {
-    	findAllProducts: findAllProducts,
-        createProduct: createProduct,
-        updateProduct: updateProduct,
-        deleteProduct: deleteProduct
+    	findAllProjects: findAllProjects,
+        createProject: createProject,
+        updateProject: updateProject,
+        deleteProject: deleteProject
     };
  
     return factory;
  
-    function findAllProducts() {
+    function findAllProjects() {
         var deferred = $q.defer();
-        $http.get(REST_SERVICE_URI+'products')
+        $http.get(REST_SERVICE_URI+'projects')
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while fetching products');
+                console.error('Error while fetching projects');
                 deferred.reject(errResponse);
             }
         );
         return deferred.promise;
     }
  
-    function createProduct(product) {
+    function createProject(project) {
         var deferred = $q.defer();
-        $http.post(REST_SERVICE_URI+'product', product)
+        $http.post(REST_SERVICE_URI+'project', project)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while creating product');
+                console.error('Error while creating project');
                 deferred.reject(errResponse);
             }
         );
@@ -44,30 +44,30 @@ angular.module('app').factory('ProductService', ['$http', '$q', function($http, 
     }
  
  
-    function updateProduct(product) {
+    function updateProject(project) {
         var deferred = $q.defer();
-        $http.put(REST_SERVICE_URI+'product', product)
+        $http.put(REST_SERVICE_URI+'project', project)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while updating product');
+                console.error('Error while updating project');
                 deferred.reject(errResponse);
             }
         );
         return deferred.promise;
     }
  
-    function deleteProduct(id) {
+    function deleteProject(id) {
         var deferred = $q.defer();
-        $http.delete(REST_SERVICE_URI+'product/'+id)
+        $http.delete(REST_SERVICE_URI+'project/'+id)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while deleting product');
+                console.error('Error while deleting project');
                 deferred.reject(errResponse);
             }
         );
