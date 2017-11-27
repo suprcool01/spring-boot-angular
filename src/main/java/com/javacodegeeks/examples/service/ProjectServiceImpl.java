@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.javacodegeeks.dto.Project;
@@ -17,6 +18,9 @@ public class ProjectServiceImpl implements ProjectService {
 
 	private static List<Project> projects;
 
+	@Autowired
+	private BugService bugService;
+	
 	static {
 		projects = populateProjects();
 	}
@@ -25,6 +29,7 @@ public class ProjectServiceImpl implements ProjectService {
 	public Project findProjectById(int id) {
 		for (Project project : projects) {
 			if (id == project.getId()) {
+				project.setBugs(bugService.findAllBugs(id));
 				return project;
 			}
 		}
@@ -81,9 +86,9 @@ public class ProjectServiceImpl implements ProjectService {
 
 	private static List<Project> populateProjects() {
 		List<Project> projects = new ArrayList<Project>();
-		projects.add(new Project(1, "Project1", "Project1 Desc", null));
-		projects.add(new Project(1, "Project2", "Project2 Desc", null));
-		projects.add(new Project(1, "Project3", "Project3 Desc", null));
+		projects.add(new Project(counter.incrementAndGet(), "Project1", "Project1 Desc", null));
+		projects.add(new Project(counter.incrementAndGet(), "Project2", "Project2 Desc", null));
+		projects.add(new Project(counter.incrementAndGet(), "Project3", "Project3 Desc", null));
 		/*projects.add(new Project(counter.incrementAndGet(),"google.com", "Open", "Browser", "Medium", "Bug_desc_1", "Fahim", "v1.0.5", null,
 				"Fahim2", "Fix descrp 1"));
 		projects.add(new Project(counter.incrementAndGet(),"yahoo.com", "Hold", "Application", "High", "Bug_desc_2", "Ghole", "v1.0.10", null,

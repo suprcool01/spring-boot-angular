@@ -13,9 +13,9 @@ angular.module('app').factory('BugService', ['$http', '$q', function($http, $q){
  
     return factory;
  
-    function findAllBugs() {
+    function findAllBugs(projectId) {
         var deferred = $q.defer();
-        $http.get(REST_SERVICE_URI+'bugs')
+        $http.get(REST_SERVICE_URI+'project/id/'+projectId)
             .then(
             function (response) {
                 deferred.resolve(response.data);

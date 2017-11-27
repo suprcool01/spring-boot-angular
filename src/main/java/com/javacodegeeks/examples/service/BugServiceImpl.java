@@ -2,6 +2,7 @@ package com.javacodegeeks.examples.service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -65,6 +66,17 @@ public class BugServiceImpl implements BugService {
 	}
 
 	@Override
+	public List<Bug> findAllBugs(int bugId) {
+		List<Bug> projectBugs = new LinkedList();
+		for (Bug bug : bugs) {
+			if(bug.getProjectId() == bugId) {
+				projectBugs.add(bug);
+			}
+		}
+		return projectBugs;
+	}
+	
+	@Override
 	public List<Bug> findAllBugs() {
 		return bugs;
 	}
@@ -81,12 +93,19 @@ public class BugServiceImpl implements BugService {
 
 	private static List<Bug> populateBugs() {
 		List<Bug> bugs = new ArrayList<Bug>();
-		bugs.add(new Bug(counter.incrementAndGet(),"google.com", "Open", "Browser", "Medium", "Bug_desc_1", "Fahim", "v1.0.5", null,
+		bugs.add(new Bug(1, counter.incrementAndGet(),"Homepage", "Open", "Browser", "Medium", "Proj-1_Bug_desc_1", "Fahim", "v1.0.5", "13/11/2017",
 				"Fahim2", "Fix descrp 1"));
-		bugs.add(new Bug(counter.incrementAndGet(),"yahoo.com", "Hold", "Application", "High", "Bug_desc_2", "Ghole", "v1.0.10", null,
+		bugs.add(new Bug(1, counter.incrementAndGet(),"Map", "Hold", "Application", "High", "Proj-1_Bug_desc_2", "Ghole", "v1.0.10", "10/11/2017",
 				"Ghole2", "Fix descrp 2"));
-		bugs.add(new Bug(counter.incrementAndGet(),"gmail.com", "Close", "Application", "Low", "Bug_desc_3", "Dummy", "v1.1.10", null,
+		bugs.add(new Bug(1, counter.incrementAndGet(),"General", "Close", "Application", "Low", "Proj-1_Bug_desc_3", "Dummy", "v1.1.10", "23/11/2017",
 				"Dummy 3", "Fix descrp 3"));
+		
+		bugs.add(new Bug(2, counter.incrementAndGet(),"Admin", "Open", "Browser", "Medium", "Proj-2_Bug_desc_1", "Fahim", "v1.0.5", "25/11/2017",
+				"Fahim2", "Fix descrp 1"));
+		bugs.add(new Bug(2, counter.incrementAndGet(),"Noticeboard", "Hold", "Application", "High", "Proj-2_Bug_desc_2", "Ghole", "v1.0.10", "27/11/2017",
+				"Ghole2", "Fix descrp 2"));
+		
+		
 		/*Bugs.add(new Bug(counter.incrementAndGet(), "Mobile", 25498.00, "google", "WIP", "Usability"));
 		Bugs.add(new Bug(counter.incrementAndGet(), "Desktop", 32658.00, "google", "WIP", "Usability"));
 		Bugs.add(new Bug(counter.incrementAndGet(), "Laptop", 52147.00,"google", "WIP", "Usability"));

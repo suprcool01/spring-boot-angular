@@ -1,8 +1,8 @@
 'use strict';
  
-angular.module('app').controller('BugController', ['$scope', 'BugService', function($scope, BugService) {
+angular.module('app').controller('BugController', ['$scope', '$routeParams', 'BugService', function($scope, $routeParams, BugService) {
     var self = this;
-    self.bug = { id: null, name:'', price: 0.0, bugId: '', location: '', status: '',type: '' };
+    self.bug = { id: null, name:'', bugId: '', location: '', status: '',type: '',projectId: '' };
     
   
     self.bugs = [];
@@ -12,6 +12,7 @@ angular.module('app').controller('BugController', ['$scope', 'BugService', funct
     self.remove = remove;
     self.reset = reset;
     
+    $scope.projectId = $routeParams.ID;
     $scope.propertyName = 'location';
     $scope.reverse = true;
     $scope.friends = self.bugs;
@@ -25,10 +26,13 @@ angular.module('app').controller('BugController', ['$scope', 'BugService', funct
     findAllBugs();
  
     function findAllBugs(){
-    	BugService.findAllBugs()
+    	/*var projectId = $routeParams.ID;*/
+    	console.log("projectId : " + $scope.projectId)
+    	
+    	BugService.findAllBugs($scope.projectId)
             .then(
             function(d) {
-                self.bugs = d;
+                self.bugs = d.bugs;
             },
             function(errResponse){
                 console.error('Error while fetching bugs');
@@ -37,6 +41,8 @@ angular.module('app').controller('BugController', ['$scope', 'BugService', funct
     }
  
     function createBug(bug){
+    	bug.projectId = $scope.projectId;
+    	console.log("saving bug"+bug);
     	BugService.createBug(bug)
             .then(
             findAllBugs,

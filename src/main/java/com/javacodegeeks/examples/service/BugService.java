@@ -22,4 +22,6 @@ public interface BugService {
 
 	public boolean isBugAvailable(Bug bug);
 
+	List<Bug> findAllBugs(int bugId);
+
 }

@@ -13,7 +13,11 @@ app.config(function($routeProvider){
             templateUrl: '/views/projects.html',
             controller: 'projectController'
         })
-        .when('/bugs',{
+        .when('/new_projects',{
+            templateUrl: '/views/new_project.html',
+            controller: 'ProjectController'
+        })
+        .when('/bugs/:ID',{
             templateUrl: '/views/bugs.html',
             controller: 'BugController'
         })

@@ -44,6 +44,29 @@ public class Project {
 	public void setBugs(List<Bug> bugs) {
 		this.bugs = bugs;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Project other = (Project) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
 	
 	
 }

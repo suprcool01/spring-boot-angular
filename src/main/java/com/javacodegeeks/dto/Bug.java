@@ -16,6 +16,8 @@ public class Bug {
 	private String dateFound;
 	private String assignedTo;
 	private String fixDescription;
+	private int projectId;
+	
 
 	public Bug() {
 	}
@@ -27,10 +29,11 @@ public class Bug {
 	}
 	
 
-	public Bug(int id, String location, String status, String type, String severity,
+	public Bug(int projectId,int id, String location, String status, String type, String severity,
 			String bugDescription, String foundBy, String againstVersion, String dateFound, String assignedTo,
 			String fixDescription) {
 		super();
+		this.projectId = projectId;
 		this.id = id;
 		this.location = location;
 		this.status = status;
@@ -176,6 +179,14 @@ public class Bug {
 
 	public void setFixDescription(String fixDescription) {
 		this.fixDescription = fixDescription;
+	}
+
+	public int getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(int projectId) {
+		this.projectId = projectId;
 	}
 
 	

@@ -61,7 +61,7 @@ public class ProjectController {
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/project/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/project/id/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Project> getProjectByid(@PathVariable int id) {
 		Project project = projectService.findProjectById(id);
 		if (project == null) {
