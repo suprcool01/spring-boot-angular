@@ -21,6 +21,10 @@ app.config(function($routeProvider){
             templateUrl: '/views/bugs.html',
             controller: 'BugController'
         })
+        .when('/create_ticket',{
+            templateUrl: '/views/create_ticket.html',
+            controller: 'TicketController'
+        })
         .otherwise(
             { redirectTo: '/'}
         );

@@ -1,0 +1,57 @@
+ <div class="generic-container" ng-controller="TicketController as ctrl">
+          <div class="panel panel-default">
+              <div class="panel-heading"><span class="lead">Create new Ticket</span></div>
+              <div class="formcontainer">
+                  <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+                      <input type="hidden" ng-model="ctrl.project.id" />
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="dataTime">Date & Time</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.project.dataTime" id="dataTime" class="field form-control input-sm" placeholder="Enter Date And Time" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.dataTime.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.dataTime.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.dataTime.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="name">Name</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.project.name" id="name" class="field form-control input-sm" placeholder="Enter Project name" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.name.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.name.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.name.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="description">Description</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.project.description" id="description" class="field form-control input-sm" placeholder="Enter Project Description" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.name.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.name.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.name.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+ 
+                      <div class="row">
+                          <div class="form-actions floatRight">
+                              <input type="submit"  value="{{!ctrl.project.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
+                              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          
+      <
