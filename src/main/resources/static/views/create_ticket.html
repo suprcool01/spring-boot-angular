@@ -1,7 +1,7 @@
  <div class="generic-container" ng-controller="TicketController as ctrl">
           <div class="panel panel-default">
               <div class="panel-heading"><span class="lead">Create new Ticket</span></div>
-              <div class="formcontainer">
+              <div class="formcontainer test">
                   <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
                       <input type="hidden" ng-model="ctrl.project.id" />
                       <div class="row">
@@ -53,5 +53,23 @@
                   </form>
               </div>
           </div>
-          
-      <
+
+
+	<table class="table table-bordered test">
+
+		<!--Table body-->
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td colspan="2">Larry the Bird</td>
+				<td>@twitter</td>
+			</tr>
+		</tbody>
+		<!--Table body-->
+
+	</table>
+	<!--Table-->
