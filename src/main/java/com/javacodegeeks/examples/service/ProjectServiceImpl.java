@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.javacodegeeks.dto.Project;
+import com.javacodegeeks.examples.dal.UserDAL;
 
 
 @Service
@@ -20,6 +21,9 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Autowired
 	private BugService bugService;
+	
+	@Autowired
+	private UserDAL userDAL;
 	
 	static {
 		projects = populateProjects();
@@ -71,6 +75,7 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public List<Project> findAllProjects() {
+		userDAL.saveDummy();
 		return projects;
 	}
 
