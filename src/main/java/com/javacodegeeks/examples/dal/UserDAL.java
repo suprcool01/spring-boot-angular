@@ -19,5 +19,4 @@ public interface UserDAL {
 
 	String addUserSetting(String userId, String key, String value);
 	
-	String saveDummy();
 }

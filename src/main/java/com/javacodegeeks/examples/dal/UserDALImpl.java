@@ -67,13 +67,4 @@ public class UserDALImpl implements UserDAL {
 		}
 	}
 
-	@Override
-	public String saveDummy() {
-		User us = new User();
-		us.setName("Hell");
-		addNewUser(us);
-		return null;
-	}
-	
-	
 }
