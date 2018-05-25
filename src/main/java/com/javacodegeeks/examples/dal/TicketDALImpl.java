@@ -44,13 +44,4 @@ public class TicketDALImpl implements TicketDAL {
 	}
 
 
-	public String saveDummy() {
-		Ticket us = new Ticket();
-		us.setCustomer("Aamir");
-		us.setDateAndTime("11/11/11");
-		//mongoTemplate.save(us);
-		return null;
-	}
-	
-	
 }

@@ -3,15 +3,14 @@
 angular.module('app').controller('TicketController', ['$scope', 'TicketService', '$location', function($scope, TicketService, $location) {
     var self = this;
     
-    self.project = {
+    self.ticket = {
 		id : null,
 		name : '',
-		description : '',
 		dataTime : ''
 	};
 
   
-    self.projects = [];
+    self.tickets = [];
  
     self.submit = submit;
     self.edit = edit;
@@ -21,74 +20,73 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
     
     $scope.propertyName = 'name';
     $scope.reverse = true;
-    $scope.friends = self.projects;
+    $scope.friends = self.tickets;
 
     $scope.sortBy = function(propertyName) {
-    	console.log("Test");
       $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
       $scope.propertyName = propertyName;
     };
  
-    findAllProjects();
+    findAllTickets();
  
-    function findAllProjects(){
-    	TicketService.findAllProjects()
+    function findAllTickets(){
+    	TicketService.findAllTickets()
             .then(
             function(d) {
-                self.projects = d;
+                self.tickets = d;
             },
             function(errResponse){
-                console.error('Error while fetching projects');
+                console.error('Error while fetching tickets');
             }
         );
     }
     
-    function createProject(project){
-    	TicketService.createProject(project)
+    function createTicket(ticket){
+    	TicketService.createTicket(ticket)
             .then(
-            findAllProjects,
+            findAllTickets,
             function(errResponse){
-                console.error('Error while creating project');
+                console.error('Error while creating ticket');
             }
         );
     }
  
-    function updateProject(project){
-    	TicketService.updateProject(project)
+    function updateTicket(ticket){
+    	TicketService.updateTicket(ticket)
             .then(
-            findAllProjects,
+            findAllTickets,
             function(errResponse){
-                console.error('Error while updating project');
+                console.error('Error while updating ticket');
             }
         );
     }
  
-    function deleteProject(id){
-    	TicketService.deleteProject(id)
+    function deleteTicket(id){
+    	TicketService.deleteTicket(id)
             .then(
-            findAllProjects,
+            findAllTickets,
             function(errResponse){
-                console.error('Error while deleting project');
+                console.error('Error while deleting ticket');
             }
         );
     }
  
     function submit() {
-        if(self.project.id===null){
-            console.log('Saving New Project', self.project);
-            createProject(self.project);
+        if(self.ticket.id===null){
+            console.log('Saving New Ticket', self.ticket);
+            createTicket(self.ticket);
         }else{
-            updateProject(self.project);
-            console.log('Project updated with id ', self.project.id);
+            updateTicket(self.ticket);
+            console.log('Ticket updated with id ', self.ticket.id);
         }
         reset();
     }
  
     function edit(id){
         console.log('id to be edited', id);
-        for(var i = 0; i < self.projects.length; i++){
-            if(self.projects[i].id === id) {
-                self.project = angular.copy(self.projects[i]);
+        for(var i = 0; i < self.tickets.length; i++){
+            if(self.tickets[i].id === id) {
+                self.ticket = angular.copy(self.tickets[i]);
                 break;
             }
         }
@@ -96,10 +94,10 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
  
     function remove(id){
         console.log('id to be deleted', id);
-        if(self.project.id === id) {//clean form if the project to be deleted is shown there.
+        if(self.ticket.id === id) {//clean form if the ticket to be deleted is shown there.
             reset();
         }
-        deleteProject(id);
+        deleteTicket(id);
     }
 
     function showBugs(id) {
@@ -107,10 +105,9 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
     }
     
     function reset(){
-	    self.project = {
+	    self.ticket = {
 			id : null,
 			name : '',
-			description : '',
 			dataTime : ''
 		};
     	$scope.myForm.$setPristine(); //reset Form

@@ -5,38 +5,39 @@ angular.module('app').factory('TicketService', ['$http', '$q', function($http, $
     var REST_SERVICE_URI = 'http://localhost:8080/';
  
     var factory = {
-    	findAllProjects: findAllProjects,
-        createProject: createProject,
-        updateProject: updateProject,
-        deleteProject: deleteProject
+    	findAllTickets: findAllTickets,
+        createTicket: createTicket,
+        updateTicket: updateTicket,
+        deleteTicket: deleteTicket
     };
  
     return factory;
  
-    function findAllProjects() {
+    function findAllTickets() {
         var deferred = $q.defer();
-        $http.get(REST_SERVICE_URI+'projects')
+        
+        $http.get(REST_SERVICE_URI+'tickets')
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while fetching projects');
+                console.error('Error while fetching tickets');
                 deferred.reject(errResponse);
             }
         );
         return deferred.promise;
     }
  
-    function createProject(project) {
+    function createTicket(ticket) {
         var deferred = $q.defer();
-        $http.post(REST_SERVICE_URI+'project', project)
+        $http.post(REST_SERVICE_URI+'ticket', ticket)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while creating project');
+                console.error('Error while creating ticket');
                 deferred.reject(errResponse);
             }
         );
@@ -44,30 +45,30 @@ angular.module('app').factory('TicketService', ['$http', '$q', function($http, $
     }
  
  
-    function updateProject(project) {
+    function updateTicket(ticket) {
         var deferred = $q.defer();
-        $http.put(REST_SERVICE_URI+'project', project)
+        $http.put(REST_SERVICE_URI+'ticket', ticket)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while updating project');
+                console.error('Error while updating ticket');
                 deferred.reject(errResponse);
             }
         );
         return deferred.promise;
     }
  
-    function deleteProject(id) {
+    function deleteTicket(id) {
         var deferred = $q.defer();
-        $http.delete(REST_SERVICE_URI+'project/'+id)
+        $http.delete(REST_SERVICE_URI+'ticket/'+id)
             .then(
             function (response) {
                 deferred.resolve(response.data);
             },
             function(errResponse){
-                console.error('Error while deleting project');
+                console.error('Error while deleting ticket');
                 deferred.reject(errResponse);
             }
         );

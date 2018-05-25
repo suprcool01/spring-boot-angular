@@ -75,7 +75,6 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public List<Project> findAllProjects() {
-		userDAL.saveDummy();
 		return projects;
 	}
 

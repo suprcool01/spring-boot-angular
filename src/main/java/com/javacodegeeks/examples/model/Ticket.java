@@ -9,7 +9,7 @@ public class Ticket {
 	@Id
 	private String id;
 	private String name;
-	private String dateAndTime;
+	private String dateTime;
 	private String customer;
 
 
@@ -21,13 +21,6 @@ public class Ticket {
 		this.id = id;
 	}
 
-	public String getDateAndTime() {
-		return dateAndTime;
-	}
-
-	public void setDateAndTime(String dateAndTime) {
-		this.dateAndTime = dateAndTime;
-	}
 
 	public String getCustomer() {
 		return customer;
@@ -43,6 +36,14 @@ public class Ticket {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(String dateTime) {
+		this.dateTime = dateTime;
 	}
 
 }
