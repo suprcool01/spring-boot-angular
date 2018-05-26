@@ -1,3 +1,8 @@
+<style>
+/* div[class*=col-] {
+	border: 1px solid #ccc;
+} */
+</style>
  <div class="generic-container" ng-controller="TicketController as ctrl">
           <div class="panel panel-default">
               <div class="panel-heading"><span class="lead">Create new Ticket</span></div>
@@ -6,18 +11,18 @@
                       <input type="hidden" ng-model="ctrl.ticket.id" />
                       <div class="row">
                           <div class="form-group col-md-12">
-                              <label class="col-md-2 control-lable" for="dataTime">Date & Time</label>
+                              <label class="col-md-2 control-lable" for="dateTime">Date & Time</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.ticket.dataTime" id="dataTime" class="field form-control input-sm" placeholder="Enter Date And Time" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.ticket.dateTime" id="dateTime" class="field form-control input-sm" placeholder="Enter Date And Time" required ng-minlength="3"/>
                                   <div class="has-error" ng-show="myForm.$dirty">
-                                      <span ng-show="myForm.dataTime.$error.required">This is a required field</span>
-                                      <span ng-show="myForm.dataTime.$error.minlength">Minimum length required is 3</span>
-                                      <span ng-show="myForm.dataTime.$invalid">This field is invalid </span>
+                                      <span ng-show="myForm.dateTime.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.dateTime.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.dateTime.$invalid">This field is invalid </span>
                                   </div>
                               </div>
                           </div>
                       </div>
-                      <div class="row">
+                      <!-- <div class="row">
                           <div class="form-group col-md-12">
                               <label class="col-md-2 control-lable" for="name">Name</label>
                               <div class="col-md-7">
@@ -29,8 +34,36 @@
                                   </div>
                               </div>
                           </div>
+                      </div> -->
+ 					  <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="customer">Customer</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.customer" id="customer" class="field form-control input-sm" placeholder="Customer" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.customer.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.customer.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.customer.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
- 
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable">Systems Involved</label>
+                              <div class="col-md-3">
+                              	<label class="col-md-2 control-lable" for="stage">Stage</label>
+                              </div>
+                              <div class="col-md-4">
+                                  <input type="text" ng-model="ctrl.ticket.stage" id="stage" class="field form-control input-sm" placeholder="Stage" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.stage.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.stage.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.stage.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                       <div class="row">
                           <div class="form-actions floatRight">
                               <input type="submit"  value="{{!ctrl.ticket.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
@@ -45,19 +78,19 @@
 	<!--Table-->
 	<div class="panel panel-default">
                 <!-- Default panel contents -->
-              <div class="panel-heading"><span class="lead">List of Projects</span></div>
+              <div class="panel-heading"><span class="lead">List of Tickets</span></div>
               <div class="tablecontainer">
                   <table class="table table-hover">
                       <thead>
                           <tr>
                               <th><a href=""
-							        ng-click="sortBy('id')">Project Id
+							        ng-click="sortBy('id')">Ticket Id
 							        <span class="sortorder" ng-show="propertyName === 'id'" ng-class="{reverse: reverse}"></span>
 						        </a>
 					        </th>
 					        <th><a href=""
-							        ng-click="sortBy('name')">Project Name
-							        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+							        ng-click="sortBy('customer')">Customer Name
+							        <span class="sortorder" ng-show="propertyName === 'customer'" ng-class="{reverse: reverse}"></span>
 						        </a>
 					        </th>
                               <!-- <th>Price</th> -->
@@ -67,14 +100,14 @@
                       <tbody>
                           <tr ng-repeat="p in ctrl.tickets | orderBy:propertyName:reverse">
                               <td><span ng-bind="p.id"></span></td>
-                              <td><span ng-bind="p.name"></span></td>
+                              <td><span ng-bind="p.customer"></span></td>
                               <td>
                               	<button type="button"
 								ng-click="ctrl.edit(p.id)" class="btn btn-success custom-width">Edit</button>
 								<button type="button" ng-click="ctrl.remove(p.id)"
 								class="btn btn-danger custom-width">Remove</button>
 								<button type="button" ng-click="ctrl.showBugs(p.id)"
-								class="btn btn-primary btn-sm custom-width">List of Bugs</button>
+								class="btn btn-primary btn-sm custom-width">List of Tickets</button>
 						</td>
                           </tr>
                       </tbody>

@@ -6,7 +6,8 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
     self.ticket = {
 		id : null,
 		name : '',
-		dataTime : ''
+		dateTime : '',
+		customer : ''
 	};
 
   
@@ -108,7 +109,8 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
 	    self.ticket = {
 			id : null,
 			name : '',
-			dataTime : ''
+			dateTime : '',
+			customer: ''
 		};
     	$scope.myForm.$setPristine(); //reset Form
     }

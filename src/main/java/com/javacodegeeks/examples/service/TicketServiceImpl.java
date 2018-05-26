@@ -35,6 +35,7 @@ public class TicketServiceImpl implements TicketService {
 		Ticket dbTicket = ticketDAL.getTicketById(ticket.getId());
 		if(dbTicket != null) {
 			ticket.setId(dbTicket.getId());
+			ticketDAL.updateTicket(ticket);
 		}
 	}
 

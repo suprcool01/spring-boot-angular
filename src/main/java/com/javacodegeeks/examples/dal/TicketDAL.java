@@ -13,5 +13,7 @@ public interface TicketDAL {
 	List<Ticket> getAllTickets();
 
 	Ticket getTicketByName(String ticketName);
+
+	Ticket updateTicket(Ticket ticket);
 	
 }

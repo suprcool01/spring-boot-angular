@@ -42,6 +42,11 @@ public class TicketDALImpl implements TicketDAL {
 		// Now, ticket object will contain the ID as well
 		return ticket;
 	}
-
+	
+	@Override
+	public Ticket updateTicket(Ticket ticket) {
+		mongoTemplate.save(ticket);
+		return ticket;
+	}
 
 }
