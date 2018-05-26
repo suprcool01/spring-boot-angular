@@ -10,6 +10,11 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
 		customer : ''
 	};
 
+    self.stages = ['Stage1', 'Stage2'];
+    self.myOptions = [
+                        {a:"Quality Assurance", b:"Quality Assurance"},
+                        {a:"User Acceptance", b:"User Acceptance"},
+                        {a:"Production", b:"Production"}];
   
     self.tickets = [];
  
