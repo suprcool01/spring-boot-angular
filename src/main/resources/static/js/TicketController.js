@@ -3,21 +3,29 @@
 angular.module('app').controller('TicketController', ['$scope', 'TicketService', '$location', function($scope, TicketService, $location) {
     var self = this;
     
+    self.previousPackagesSize = 3;
+    self.patchingVersionsSize = 3;
+    
     self.ticket = {
 		id : null,
 		name : '',
 		dateTime : '',
-		customer : ''
+		customer : '',
+		previousPackages : new Array(self.previousPackagesSize),
+		patchingVersions : new Array(self.patchingVersionsSize)
 	};
 
-    self.stages = ['Stage1', 'Stage2'];
+    self.tickets = [];
+    
     self.myOptions = [
                         {a:"Quality Assurance", b:"Quality Assurance"},
                         {a:"User Acceptance", b:"User Acceptance"},
                         {a:"Production", b:"Production"}];
   
-    self.tickets = [];
- 
+
+    
+    
+
     self.submit = submit;
     self.edit = edit;
     self.remove = remove;
