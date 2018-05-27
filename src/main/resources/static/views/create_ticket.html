@@ -187,6 +187,80 @@
                       </div>
                       
                       <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="manualTaskBeforePatch">Manual Task Before Patch</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.manualTaskBeforePatch" id="manualTaskBeforePatch" class="field form-control input-sm" 
+                                  	placeholder="Enter Manual Task Before Patch" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.manualTaskBeforePatch.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.manualTaskBeforePatch.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.manualTaskBeforePatch.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="manualTaskAfterPatch">Manual Task after Patch</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.manualTaskAfterPatch" id="manualTaskAfterPatch" class="field form-control input-sm" 
+                                  	placeholder="Enter Manual Task after Patch" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.manualTaskAfterPatch.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.manualTaskAfterPatch.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.manualTaskAfterPatch.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="manualTaskBeforeRollback">Manual Task before rollback</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.manualTaskBeforeRollback" id="manualTaskBeforeRollback" class="field form-control input-sm" 
+                                  	placeholder="Enter Manual Task before rollback" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.manualTaskBeforeRollback.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.manualTaskBeforeRollback.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.manualTaskBeforeRollback.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="manualTaskAfterRollback">Manual Task after rollback</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.manualTaskAfterRollback" id="manualTaskAfterRollback" class="field form-control input-sm" 
+                                  	placeholder="Enter Manual Task after rollback" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.manualTaskAfterRollback.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.manualTaskAfterRollback.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.manualTaskAfterRollback.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="checkedPreviousDeploymentPlan">Have checked previous deployment plan to identify</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.checkedPreviousDeploymentPlan" id="checkedPreviousDeploymentPlan" class="field form-control input-sm" 
+                                  	placeholder="Enter Have checked previous deployment plan to identify" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.checkedPreviousDeploymentPlan.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.checkedPreviousDeploymentPlan.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.checkedPreviousDeploymentPlan.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
                           <div class="form-actions floatRight">
                               <input type="submit"  value="{{!ctrl.ticket.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
                               <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
