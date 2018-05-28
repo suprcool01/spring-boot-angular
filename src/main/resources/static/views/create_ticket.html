@@ -260,6 +260,346 @@
                               </div>
                           </div>
                       </div>
+                      
+                      <div>
+                      	<div class="row">
+                      	<div class="col-md-2">
+                        </div>
+                        <div class="col-md-10">
+	                        <div class="row">
+	                          <div class="form-group col-md-12">
+	                              <div class="col-md-4">
+	                              	<label class="col-md-2 control-lable" for="stage">Pre Deployment</label>
+	                              </div>
+	                              <div class="col-md-4">
+									<label class="col-md-2 control-lable" for="connection">Post Deployment</label>	                                  
+	                              </div>
+	                          </div>
+	                     	 </div>
+ 	                      </div>
+                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="customerApprovedPreDep">[UAT/LIVE] Customer has approved the deployment schedule</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.customerApprovedPreDep" 
+		                             			id="customerApprovedPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.customerApprovedPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.customerApprovedPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.customerApprovedPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.customerApprovedPostDep" 
+		                             			id="customerApprovedPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.customerApprovedPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.customerApprovedPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.customerApprovedPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="frontEndLoadsPreDep">Front end loads</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.frontEndLoadsPreDep" 
+		                             			id="frontEndLoadsPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.frontEndLoadsPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.frontEndLoadsPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.frontEndLoadsPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.frontEndLoadsPostDep" 
+		                             			id="frontEndLoadsPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.frontEndLoadsPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.frontEndLoadsPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.frontEndLoadsPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="controlCentreLoadsPreDep">Control central loads</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.controlCentreLoadsPreDep" 
+		                             			id="controlCentreLoadsPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.controlCentreLoadsPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.controlCentreLoadsPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.controlCentreLoadsPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.controlCentreLoadsPostDep" 
+		                             			id="controlCentreLoadsPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.controlCentreLoadsPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.controlCentreLoadsPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.controlCentreLoadsPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="galaxiesLoadsPreDep">Galaxies sites load and are accessible on front end</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.galaxiesLoadsPreDep" 
+		                             			id="galaxiesLoadsPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.galaxiesLoadsPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.galaxiesLoadsPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.galaxiesLoadsPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.galaxiesLoadsPostDep" 
+		                             			id="galaxiesLoadsPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.galaxiesLoadsPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.galaxiesLoadsPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.galaxiesLoadsPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="friendlyUrlPreDep">Friendly URL's work</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.friendlyUrlPreDep" 
+		                             			id="friendlyUrlPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.friendlyUrlPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.friendlyUrlPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.friendlyUrlPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.friendlyUrlPostDep" 
+		                             			id="friendlyUrlPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.friendlyUrlPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.friendlyUrlPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.friendlyUrlPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="homePageLoadsPreDep">Homepage editor loads</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.homePageLoadsPreDep" 
+		                             			id="homePageLoadsPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.homePageLoadsPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.homePageLoadsPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.homePageLoadsPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.homePageLoadsPostDep" 
+		                             			id="homePageLoadsPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.homePageLoadsPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.homePageLoadsPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.homePageLoadsPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="ckEditorLoadsPreDep">CKEditor loads</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.ckEditorLoadsPreDep" 
+		                             			id="ckEditorLoadsPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.ckEditorLoadsPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.ckEditorLoadsPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.ckEditorLoadsPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.ckEditorLoadsPostDep" 
+		                             			id="ckEditorLoadsPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.ckEditorLoadsPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.ckEditorLoadsPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.ckEditorLoadsPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="scheduleTasksPreDep">scheduled_tasks/queue_master.php is running</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.scheduleTasksPreDep" 
+		                             			id="scheduleTasksPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.scheduleTasksPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.scheduleTasksPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.scheduleTasksPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.scheduleTasksPostDep" 
+		                             			id="scheduleTasksPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.scheduleTasksPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.scheduleTasksPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.scheduleTasksPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="xPFSymfonyLoadPreDep">XFP symphony pages load</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.xPFSymfonyLoadPreDep" 
+		                             			id="xPFSymfonyLoadPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.xPFSymfonyLoadPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.xPFSymfonyLoadPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.xPFSymfonyLoadPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.xPFSymfonyLoadPostDep" 
+		                             			id="xPFSymfonyLoadPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.xPFSymfonyLoadPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.xPFSymfonyLoadPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.xPFSymfonyLoadPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="xPFFormsLoadPreDep">XFP form load</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.xPFFormsLoadPreDep" 
+		                             			id="xPFFormsLoadPreDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.xPFFormsLoadPreDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.xPFFormsLoadPreDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.xPFFormsLoadPreDep.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.xPFFormsLoadPostDep" 
+		                             			id="xPFFormsLoadPostDep" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.xPFFormsLoadPostDep.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.xPFFormsLoadPostDep.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.xPFFormsLoadPostDep.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
                       <div class="row">
                           <div class="form-actions floatRight">
                               <input type="submit"  value="{{!ctrl.ticket.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">

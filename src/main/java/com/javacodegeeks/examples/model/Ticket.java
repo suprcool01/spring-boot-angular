@@ -30,6 +30,36 @@ public class Ticket {
 	private String manualTaskAfterRollback;
 	private String checkedPreviousDeploymentPlan;
 	
+	private String customerApprovedPreDep;
+	private String customerApprovedPostDep;
+	
+	private String frontEndLoadsPreDep;
+	private String frontEndLoadsPostDep;
+	
+	private String controlCentreLoadsPreDep;
+	private String controlCentreLoadsPostDep;
+	
+	private String galaxiesLoadsPreDep;
+	private String galaxiesLoadsPostDep;
+	
+	private String friendlyUrlPreDep;
+	private String friendlyUrlPostDep;
+	
+	private String homePageLoadsPreDep;
+	private String homePageLoadsPostDep;
+	
+	private String ckEditorLoadsPreDep;
+	private String ckEditorLoadsPostDep;
+	
+	private String scheduleTasksPreDep;
+	private String scheduleTasksPostDep;
+	
+	private String xPFSymfonyLoadPreDep;
+	private String xPFSymfonyLoadPostDep;
+	
+	private String xPFFormsLoadPreDep;
+	private String xPFFormsLoadPostDep;
+	
 	
 	public String getId() {
 		return id;
@@ -158,6 +188,166 @@ public class Ticket {
 
 	public void setCheckedPreviousDeploymentPlan(String checkedPreviousDeploymentPlan) {
 		this.checkedPreviousDeploymentPlan = checkedPreviousDeploymentPlan;
+	}
+
+	public String getCustomerApprovedPreDep() {
+		return customerApprovedPreDep;
+	}
+
+	public void setCustomerApprovedPreDep(String customerApprovedPreDep) {
+		this.customerApprovedPreDep = customerApprovedPreDep;
+	}
+
+	public String getCustomerApprovedPostDep() {
+		return customerApprovedPostDep;
+	}
+
+	public void setCustomerApprovedPostDep(String customerApprovedPostDep) {
+		this.customerApprovedPostDep = customerApprovedPostDep;
+	}
+
+	public String getFrontEndLoadsPreDep() {
+		return frontEndLoadsPreDep;
+	}
+
+	public void setFrontEndLoadsPreDep(String frontEndLoadsPreDep) {
+		this.frontEndLoadsPreDep = frontEndLoadsPreDep;
+	}
+
+	public String getFrontEndLoadsPostDep() {
+		return frontEndLoadsPostDep;
+	}
+
+	public void setFrontEndLoadsPostDep(String frontEndLoadsPostDep) {
+		this.frontEndLoadsPostDep = frontEndLoadsPostDep;
+	}
+
+	public String getControlCentreLoadsPreDep() {
+		return controlCentreLoadsPreDep;
+	}
+
+	public void setControlCentreLoadsPreDep(String controlCentreLoadsPreDep) {
+		this.controlCentreLoadsPreDep = controlCentreLoadsPreDep;
+	}
+
+	public String getControlCentreLoadsPostDep() {
+		return controlCentreLoadsPostDep;
+	}
+
+	public void setControlCentreLoadsPostDep(String controlCentreLoadsPostDep) {
+		this.controlCentreLoadsPostDep = controlCentreLoadsPostDep;
+	}
+
+	public String getGalaxiesLoadsPreDep() {
+		return galaxiesLoadsPreDep;
+	}
+
+	public void setGalaxiesLoadsPreDep(String galaxiesLoadsPreDep) {
+		this.galaxiesLoadsPreDep = galaxiesLoadsPreDep;
+	}
+
+	public String getGalaxiesLoadsPostDep() {
+		return galaxiesLoadsPostDep;
+	}
+
+	public void setGalaxiesLoadsPostDep(String galaxiesLoadsPostDep) {
+		this.galaxiesLoadsPostDep = galaxiesLoadsPostDep;
+	}
+
+	public String getHomePageLoadsPreDep() {
+		return homePageLoadsPreDep;
+	}
+
+	public void setHomePageLoadsPreDep(String homePageLoadsPreDep) {
+		this.homePageLoadsPreDep = homePageLoadsPreDep;
+	}
+
+	public String getHomePageLoadsPostDep() {
+		return homePageLoadsPostDep;
+	}
+
+	public void setHomePageLoadsPostDep(String homePageLoadsPostDep) {
+		this.homePageLoadsPostDep = homePageLoadsPostDep;
+	}
+
+	public String getCkEditorLoadsPreDep() {
+		return ckEditorLoadsPreDep;
+	}
+
+	public void setCkEditorLoadsPreDep(String ckEditorLoadsPreDep) {
+		this.ckEditorLoadsPreDep = ckEditorLoadsPreDep;
+	}
+
+	public String getCkEditorLoadsPostDep() {
+		return ckEditorLoadsPostDep;
+	}
+
+	public void setCkEditorLoadsPostDep(String ckEditorLoadsPostDep) {
+		this.ckEditorLoadsPostDep = ckEditorLoadsPostDep;
+	}
+
+	public String getScheduleTasksPreDep() {
+		return scheduleTasksPreDep;
+	}
+
+	public void setScheduleTasksPreDep(String scheduleTasksPreDep) {
+		this.scheduleTasksPreDep = scheduleTasksPreDep;
+	}
+
+	public String getScheduleTasksPostDep() {
+		return scheduleTasksPostDep;
+	}
+
+	public void setScheduleTasksPostDep(String scheduleTasksPostDep) {
+		this.scheduleTasksPostDep = scheduleTasksPostDep;
+	}
+
+	public String getxPFSymfonyLoadPreDep() {
+		return xPFSymfonyLoadPreDep;
+	}
+
+	public void setxPFSymfonyLoadPreDep(String xPFSymfonyLoadPreDep) {
+		this.xPFSymfonyLoadPreDep = xPFSymfonyLoadPreDep;
+	}
+
+	public String getxPFSymfonyLoadPostDep() {
+		return xPFSymfonyLoadPostDep;
+	}
+
+	public void setxPFSymfonyLoadPostDep(String xPFSymfonyLoadPostDep) {
+		this.xPFSymfonyLoadPostDep = xPFSymfonyLoadPostDep;
+	}
+
+	public String getxPFFormsLoadPreDep() {
+		return xPFFormsLoadPreDep;
+	}
+
+	public void setxPFFormsLoadPreDep(String xPFFormsLoadPreDep) {
+		this.xPFFormsLoadPreDep = xPFFormsLoadPreDep;
+	}
+
+	public String getxPFFormsLoadPostDep() {
+		return xPFFormsLoadPostDep;
+	}
+
+	public void setxPFFormsLoadPostDep(String xPFFormsLoadPostDep) {
+		this.xPFFormsLoadPostDep = xPFFormsLoadPostDep;
+	}
+
+	public String getFriendlyUrlPreDep() {
+		return friendlyUrlPreDep;
+	}
+
+	public void setFriendlyUrlPreDep(String friendlyUrlPreDep) {
+		this.friendlyUrlPreDep = friendlyUrlPreDep;
+	}
+
+	public String getFriendlyUrlPostDep() {
+		return friendlyUrlPostDep;
+	}
+
+	public void setFriendlyUrlPostDep(String friendlyUrlPostDep) {
+		this.friendlyUrlPostDep = friendlyUrlPostDep;
 	}
 
 }
