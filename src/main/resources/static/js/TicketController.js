@@ -3,8 +3,8 @@
 angular.module('app').controller('TicketController', ['$scope', 'TicketService', '$location', function($scope, TicketService, $location) {
     var self = this;
     
-    self.previousPackagesSize = 3;
-    self.patchingVersionsSize = 3;
+    self.previousPackagesSize = 1;
+    self.patchingVersionsSize = 1;
     
     self.ticket = {
 		id : null,
@@ -31,7 +31,8 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
     self.remove = remove;
     self.reset = reset;
     self.showBugs = showBugs;
-    
+    self.addPreviousPackages = addPreviousPackages;
+    self.addPatchingVersions = addPatchingVersions;
     $scope.propertyName = 'name';
     $scope.reverse = true;
     $scope.friends = self.tickets;
@@ -53,6 +54,14 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
                 console.error('Error while fetching tickets');
             }
         );
+    }
+    
+    function addPreviousPackages() {
+    	self.ticket.previousPackages.push('');
+    }
+    
+    function addPatchingVersions() {
+    	self.ticket.patchingVersions.push('');
     }
     
     function createTicket(ticket){
@@ -123,7 +132,9 @@ angular.module('app').controller('TicketController', ['$scope', 'TicketService',
 			id : null,
 			name : '',
 			dateTime : '',
-			customer: ''
+			customer: '',
+			previousPackages : new Array(self.previousPackagesSize),
+			patchingVersions : new Array(self.patchingVersionsSize)
 		};
     	$scope.myForm.$setPristine(); //reset Form
     }
