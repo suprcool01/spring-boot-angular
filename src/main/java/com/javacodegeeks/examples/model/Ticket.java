@@ -60,6 +60,16 @@ public class Ticket {
 	private String xPFFormsLoadPreDep;
 	private String xPFFormsLoadPostDep;
 	
+	private String first1;
+	private String first2;
+	
+	private String successful1;
+	private String successful2;
+	
+	private String failureDetail;
+	private String additionalStepsRequired;
+	
+	
 	
 	public String getId() {
 		return id;
@@ -349,5 +359,54 @@ public class Ticket {
 	public void setFriendlyUrlPostDep(String friendlyUrlPostDep) {
 		this.friendlyUrlPostDep = friendlyUrlPostDep;
 	}
+
+	public String getFirst1() {
+		return first1;
+	}
+
+	public void setFirst1(String first1) {
+		this.first1 = first1;
+	}
+
+	public String getFirst2() {
+		return first2;
+	}
+
+	public void setFirst2(String first2) {
+		this.first2 = first2;
+	}
+
+	public String getSuccessful1() {
+		return successful1;
+	}
+
+	public void setSuccessful1(String successful1) {
+		this.successful1 = successful1;
+	}
+
+	public String getSuccessful2() {
+		return successful2;
+	}
+
+	public void setSuccessful2(String successful2) {
+		this.successful2 = successful2;
+	}
+
+	public String getFailureDetail() {
+		return failureDetail;
+	}
+
+	public void setFailureDetail(String failureDetail) {
+		this.failureDetail = failureDetail;
+	}
+
+	public String getAdditionalStepsRequired() {
+		return additionalStepsRequired;
+	}
+
+	public void setAdditionalStepsRequired(String additionalStepsRequired) {
+		this.additionalStepsRequired = additionalStepsRequired;
+	}
+
 
 }

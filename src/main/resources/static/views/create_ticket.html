@@ -600,6 +600,100 @@
 	                      </div>
                       </div>
                       
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="first1">1.</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.first1" 
+		                             			id="first1" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.first1.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.first1.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.first1.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.first2" 
+		                             			id="first2" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.first2.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.first2.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.first2.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div>
+	                      	<div class="row">
+		                        <label class="col-md-2 control-lable" for="successful1">Successful</label>
+	                        <div class="col-md-10">
+		                        <div class="row">
+		                          <div class="form-group col-md-12">
+		                              <div class="col-md-4">
+		                             	<input type="text" ng-model="ctrl.ticket.successful1" 
+		                             			id="successful1" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.successful1.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.successful1.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.successful1.$invalid">This field is invalid </span>
+	                                    </div>
+		                              </div>
+		                              <div class="col-md-4">
+										<input type="text" ng-model="ctrl.ticket.successful2" 
+		                             			id="successful2" class="field form-control input-sm" 
+			                                	placeholder="" required ng-minlength="3"/>
+	                                  	<div class="has-error" ng-show="myForm.$dirty">
+	                                      <span ng-show="myForm.successful2.$error.required">This is a required field</span>
+	                                      <span ng-show="myForm.successful2.$error.minlength">Minimum length required is 3</span>
+	                                      <span ng-show="myForm.successful2.$invalid">This field is invalid </span>
+	                                    </div>	                                  
+		                              </div>
+		                          </div>
+		                     	 </div>
+	 	                      </div>
+	                      </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="failureDetail">Failure detail</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.failureDetail" id="failureDetail" class="field form-control input-sm" 
+                                  	placeholder="Enter failure detail" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.failureDetail.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.failureDetail.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.failureDetail.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-2 control-lable" for="additionalStepsRequired">Additional steps required</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.ticket.additionalStepsRequired" id="additionalStepsRequired" class="field form-control input-sm" 
+                                  	placeholder="Enter additional steps required" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.additionalStepsRequired.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.additionalStepsRequired.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.additionalStepsRequired.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
                       <div class="row">
                           <div class="form-actions floatRight">
                               <input type="submit"  value="{{!ctrl.ticket.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
